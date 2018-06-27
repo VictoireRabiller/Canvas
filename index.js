@@ -117,10 +117,22 @@ canvas.addEventListener("mousedown", function (event) {
 });
 
 
+// ****************
+// ANIMATION
 
+var x = 0;
+var canvasWidth = 700;
+setInterval(
+function(){
+	x++;
+	if (x>canvasWidth){
+		x=0;
+	}
+	ctx.clearRect(0,0,canvasWidth,320); // clearRect(0,0 pour effacer puis taille du canvas width et height)
+	ctx.fillRect(x,100,20,20);
 
-
-
+}
+, 25);
 
 
 
